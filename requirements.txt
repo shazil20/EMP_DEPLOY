@@ -13,7 +13,6 @@ django-heroku==0.3.1
 django-templated-mail==1.1.1
 djangorestframework==3.15.1
 djangorestframework-simplejwt==5.3.1
--e git+https://github.com/sunscrapers/djoser.git@610c78c527d4d2c9d2ec834de4df275851200bfd#egg=djoser
 drf-yasg==1.21.7
 gunicorn==22.0.0
 idna==3.7
