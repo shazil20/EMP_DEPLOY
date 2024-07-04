@@ -1,11 +1,20 @@
-
 {
-    "builds": [{
-        "src": "emp/wsgi.py",
-        "use": "@vercel/python",
-        "config": { "maxLambdaSize": "15mb", "runtime": "python3.7" }
-    }],
+    "builds": [
+        {
+            "src": "emp/wsgi.py",
+            "use": "@vercel/python",
+            "config": { "maxLambdaSize": "15mb", "runtime": "python3.7" }
+        },
+        {
+            "src": "media/**/*",
+            "use": "@vercel/static"
+        }
+    ],
     "routes": [
+        {
+            "src": "/media/(.*)",
+            "dest": "/media/$1"
+        },
         {
             "src": "/(.*)",
             "dest": "emp/wsgi.py"
