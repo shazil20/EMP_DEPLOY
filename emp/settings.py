@@ -138,10 +138,12 @@ AUTH_USER_MODEL = 'Employee_management_system.CustomUser'
 
 CORS_ALLOW_ALL_ORIGINS = True
 
-
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
